@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE components PUBLIC "-//DBFLUTE//DTD LastaDi 1.0//EN"
+	"http://dbflute.org/meta/lastadi10.dtd">
+<components namespace="jdbc">
+	<include path="jta.xml"/>
+
+	<component name="xaDataSource" class="org.lastaflute.jta.dbcp.SimpleXADataSource">
+		<property name="driverClassName">
+			"com.mysql.jdbc.Driver"
+		</property>
+		<property name="URL">
+			"jdbc:mysql://localhost:43376/maihamadb?allowPublicKeyRetrieval=true&amp;sslMode=DISABLED"
+		</property>
+		<property name="user">"maihamadb"</property>
+		<property name="password">"maihamadb"</property>
+	</component>
+
+	<component name="connectionPool" class="org.lastaflute.jta.dbcp.SimpleConnectionPool"/>
+	<component name="dataSource" class="org.lastaflute.jta.dbcp.PooledDataSource"/>
+</components>
